@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
         StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append(getString(R.string.pattern_strategy_title)+"\n");
         NinjaWarrior ninjaWarrior = new NinjaWarrior();
         stringBuilder.append(ninjaWarrior.show()+"\n");
         BerserkerWarrior berserkerWarrior = new BerserkerWarrior();

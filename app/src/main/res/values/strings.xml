@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">DesignPatterns</string>
+    <string name="pattern_strategy_title">Strategy:</string>
 </resources>
