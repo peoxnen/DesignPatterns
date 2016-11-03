@@ -7,6 +7,9 @@ import android.widget.TextView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import iview.wsienski.designpatterns.observer.AxemanObserver;
+import iview.wsienski.designpatterns.observer.Officer;
+import iview.wsienski.designpatterns.observer.SoldierObserver;
 import iview.wsienski.designpatterns.strategy.BerserkerWarrior;
 import iview.wsienski.designpatterns.strategy.NinjaWarrior;
 import iview.wsienski.designpatterns.strategy.ShieldBearerWarrior;
@@ -30,6 +33,14 @@ public class MainActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
         strategy();
+        observer();
+    }
+
+    private void observer() {
+        Officer officer = new Officer();
+        AxemanObserver axemanObserver = new AxemanObserver(officer);
+        SoldierObserver soldierObserver = new SoldierObserver(officer);
+        officer.giveCommand("Attack!",10);
     }
 
     private void strategy() {
