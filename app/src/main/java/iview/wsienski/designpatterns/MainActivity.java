@@ -1,7 +1,8 @@
 package iview.wsienski.designpatterns;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.widget.TextView;
 
 import butterknife.BindView;
@@ -12,6 +13,8 @@ import iview.wsienski.designpatterns.strategy.ShieldBearerWarrior;
 import iview.wsienski.designpatterns.strategy.behaviours.NoDefence;
 
 public class MainActivity extends AppCompatActivity {
+
+    final static String TAG = MainActivity.class.getSimpleName();
 
     @BindView(R.id.textview)
     TextView textView;
@@ -26,6 +29,10 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
+        strategy();
+    }
+
+    private void strategy() {
         StringBuilder stringBuilder = new StringBuilder();
         stringBuilder.append(getString(R.string.pattern_strategy_title)+"\n");
         NinjaWarrior ninjaWarrior = new NinjaWarrior();
@@ -36,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
         stringBuilder.append(shieldBearerWarrior.show()+"\n");
         shieldBearerWarrior.setiIDefence(new NoDefence());
         stringBuilder.append(shieldBearerWarrior.show()+"\n");
+        Log.d(TAG, stringBuilder.toString());
         textView.setText(stringBuilder);
     }
 }
