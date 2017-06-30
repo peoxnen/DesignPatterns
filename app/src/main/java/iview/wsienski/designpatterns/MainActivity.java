@@ -7,6 +7,10 @@ import android.widget.TextView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import iview.wsienski.designpatterns.decorator.BerserkerEnchant;
+import iview.wsienski.designpatterns.decorator.BlackMagic;
+import iview.wsienski.designpatterns.decorator.Enchant;
+import iview.wsienski.designpatterns.decorator.WhiteMagic;
 import iview.wsienski.designpatterns.observer.AxemanObserver;
 import iview.wsienski.designpatterns.observer.Officer;
 import iview.wsienski.designpatterns.observer.SoldierObserver;
@@ -18,6 +22,7 @@ import iview.wsienski.designpatterns.strategy.behaviours.NoDefence;
 public class MainActivity extends AppCompatActivity {
 
     final static String TAG = MainActivity.class.getSimpleName();
+    StringBuilder stringBuilder = new StringBuilder();
 
     @BindView(R.id.textview)
     TextView textView;
@@ -34,6 +39,22 @@ public class MainActivity extends AppCompatActivity {
         super.onStart();
         strategy();
         observer();
+        decorator();
+        textView.setText(stringBuilder);
+    }
+
+    private void decorator() {
+        Enchant enchant = new BerserkerEnchant();
+        Enchant blackMagic = new BlackMagic(enchant);
+        Enchant blackMagic2 = new BlackMagic(blackMagic);
+
+        Enchant enchant2 = new BerserkerEnchant();
+        Enchant whiteMagic = new WhiteMagic(enchant2);
+
+        stringBuilder.append("\n"+getString(R.string.pattern_decorator_title)+"\n");
+        stringBuilder.append("Enchant + 2xBlack Magic: "+blackMagic2.getTitle() + " strength="+blackMagic2.getStrength()+"\n");
+        stringBuilder.append("Enchant + White Magic: "+whiteMagic.getTitle() + " strength="+whiteMagic.getStrength()+"\n");
+        Log.d(TAG, stringBuilder.toString());
     }
 
     private void observer() {
@@ -44,8 +65,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void strategy() {
-        StringBuilder stringBuilder = new StringBuilder();
-        stringBuilder.append(getString(R.string.pattern_strategy_title)+"\n");
+        stringBuilder.append("\n"+getString(R.string.pattern_strategy_title)+"\n");
         NinjaWarrior ninjaWarrior = new NinjaWarrior();
         stringBuilder.append(ninjaWarrior.show()+"\n");
         BerserkerWarrior berserkerWarrior = new BerserkerWarrior();
@@ -55,6 +75,5 @@ public class MainActivity extends AppCompatActivity {
         shieldBearerWarrior.setiIDefence(new NoDefence());
         stringBuilder.append(shieldBearerWarrior.show()+"\n");
         Log.d(TAG, stringBuilder.toString());
-        textView.setText(stringBuilder);
     }
 }
