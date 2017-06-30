@@ -3,6 +3,7 @@ This project was created for educational purposes only! Projects show Design Pat
 <ul>
 <li>Strategy</li>
 <li>Observer</li>
+<li>Decorator</li>
 </ul>
 <h1>Status:</h1>
 In progress...
