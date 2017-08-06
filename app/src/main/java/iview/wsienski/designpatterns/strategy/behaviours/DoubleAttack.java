@@ -11,7 +11,7 @@ public class DoubleAttack implements IAttack {
 
     @Override
     public String attack() {
-        String text = "double attack";
+        String text = "double locate";
         Log.d(TAG, text);
         return text;
     }

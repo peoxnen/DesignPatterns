@@ -11,7 +11,7 @@ public class BerserkerAttack implements IAttack {
 
     @Override
     public String attack() {
-        String text = "berserker attack";
+        String text = "berserker locate";
         Log.d(TAG, text);
         return text;
     }

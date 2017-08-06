@@ -18,7 +18,7 @@ public class ShieldBearerWarrior extends Warrior{
     }
     @Override
     public String show() {
-        String text = TAG+" battle : attack="+iAttack.attack()+" defence="+iDefence.defence();
+        String text = TAG+" battle : locate="+iAttack.attack()+" defence="+iDefence.defence();
         Log.d(TAG, text);
         return text;
     }

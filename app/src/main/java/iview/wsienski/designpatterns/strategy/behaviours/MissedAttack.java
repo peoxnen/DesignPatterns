@@ -11,7 +11,7 @@ public class MissedAttack implements IAttack {
 
     @Override
     public String attack() {
-        String text = "attack attack";
+        String text = "locate locate";
         Log.d(TAG, text);
         return text;
     }
