@@ -9,8 +9,8 @@ public class RussianArmy extends Army {
     Company createCompany(String type) {
         if(type.equals(Army.INFANTRY_TAG)){
             return new RussianInfantryCompany();
-        } else if(type.equals(Army.STANDARD_TAG)){
-            return new RussianStandardCompany();
+        } else if(type.equals(Army.CAVLRY_TAG)){
+            return new RussianCavlryCompany();
         }
         return null;
     }
