@@ -1,4 +1,4 @@
-package iview.wsienski.designpatterns.abstractfactory;
+package iview.wsienski.designpatterns.abstractfactory.clients;
 
 import iview.wsienski.designpatterns.abstractfactory.company.Company;
 

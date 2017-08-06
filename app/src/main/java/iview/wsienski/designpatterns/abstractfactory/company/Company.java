@@ -2,9 +2,9 @@ package iview.wsienski.designpatterns.abstractfactory.company;
 
 import android.util.Log;
 
-import iview.wsienski.designpatterns.abstractfactory.armament.Armor;
-import iview.wsienski.designpatterns.abstractfactory.armament.Horse;
-import iview.wsienski.designpatterns.abstractfactory.armament.MeleeWeapon;
+import iview.wsienski.designpatterns.abstractfactory.products.Armor;
+import iview.wsienski.designpatterns.abstractfactory.products.Horse;
+import iview.wsienski.designpatterns.abstractfactory.products.MeleeWeapon;
 
 /**
  * Created by Witold Sienski on 06.08.2017.

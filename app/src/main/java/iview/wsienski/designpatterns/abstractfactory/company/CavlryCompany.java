@@ -2,7 +2,7 @@ package iview.wsienski.designpatterns.abstractfactory.company;
 
 import android.util.Log;
 
-import iview.wsienski.designpatterns.abstractfactory.type.ArmamentFactory;
+import iview.wsienski.designpatterns.abstractfactory.factories.ArmamentFactory;
 
 /**
  * Created by Witold Sienski on 06.08.2017.

@@ -1,9 +1,9 @@
 package iview.wsienski.designpatterns.patterns;
 
 import iview.wsienski.designpatterns.Pattern;
-import iview.wsienski.designpatterns.abstractfactory.Army;
-import iview.wsienski.designpatterns.abstractfactory.PolishArmy;
-import iview.wsienski.designpatterns.abstractfactory.RussianArmy;
+import iview.wsienski.designpatterns.abstractfactory.clients.Army;
+import iview.wsienski.designpatterns.abstractfactory.clients.PolishArmy;
+import iview.wsienski.designpatterns.abstractfactory.clients.RussianArmy;
 
 /**
  * Created by Witold Sienski on 06.08.2017.

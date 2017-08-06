@@ -1,12 +1,12 @@
-package iview.wsienski.designpatterns.abstractfactory;
+package iview.wsienski.designpatterns.abstractfactory.clients;
 
 import android.util.Log;
 
 import iview.wsienski.designpatterns.abstractfactory.company.CavlryCompany;
 import iview.wsienski.designpatterns.abstractfactory.company.Company;
 import iview.wsienski.designpatterns.abstractfactory.company.InfantryCompany;
-import iview.wsienski.designpatterns.abstractfactory.type.ArmamentFactory;
-import iview.wsienski.designpatterns.abstractfactory.type.PolishArnament;
+import iview.wsienski.designpatterns.abstractfactory.factories.ArmamentFactory;
+import iview.wsienski.designpatterns.abstractfactory.factories.PolishArnament;
 
 /**
  * Created by Witold Sienski on 06.08.2017.
