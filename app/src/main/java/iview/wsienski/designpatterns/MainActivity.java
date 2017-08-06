@@ -6,6 +6,7 @@ import android.widget.TextView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import iview.wsienski.designpatterns.patterns.AbstractFactory;
 import iview.wsienski.designpatterns.patterns.Decorator;
 import iview.wsienski.designpatterns.patterns.MethodFactory;
 import iview.wsienski.designpatterns.patterns.Observer;
@@ -33,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
         runPattern(new Decorator());
         runPattern(new SimpleFactory());
         runPattern(new MethodFactory());
+        runPattern(new AbstractFactory());
     }
 
     private void runPattern(Pattern pattern) {
